@@ -106,7 +106,15 @@ Lab III - Interacting with OpenShift from JBoss Developer Studio
 -------------------------
 In this lab, we will now demonstrate one way in which a Developer can interact with an OpenShift envirnonment directly from JBoss Developer Studio.
 * In JBoss Developer Studio, on the bottom tab bar, select "OpenShift Explorer"
-![](/images/openshift-explorer-new-connection.png)
+![](/images/openshift-explorer-new-connection.png)  
+and select "New Connection Wizard"
+* The first screen of the wizard will allow you to retrieve an access token to interact with the OpenShift environment.  Enter the URL of your OpenShift environment and select the "retrieve" link.
+![](/images/openshift-explorer-new-token-start.png)
+* After clicking the "retrieve" link, you will be prompted for your username and password for the OpenShift environment.
+* Upon authenticating, a screen showing your authorization token is displayed
+![](/images/openshift-explorer-auth-token.png)  
+* Simply hit "Close" and you will see the token automatically populated for you
+![](/images/openshift-explorer-auth-token-complete.png)
 
 
 
