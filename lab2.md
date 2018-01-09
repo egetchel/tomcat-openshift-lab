@@ -15,7 +15,7 @@ Click the Java button to bring up the next screen.
 Select the Red Hat JBoss Web Server (Tomcat) button.
 * The next screen shows all avaiable Tomcat images. Choose any of the Tomcat 7 images.
 ![create](/images/openshift-specify-tomcat-version.png)
-* Finally, we provide a name for the actual Tomcat resource and where the source code of our web application resides.  Use the Git URL of your repository used in previous steps.  
+* Finally, we provide a name for the actual Tomcat resource and where the source code of our web application resides.  Use the Git URL of your repository used in previous steps (or https://github.com/egetchel/SampleWebApp/ if you want to quickly try a sample application).  
 ![create](/images/openshift-assicate-git-repo.png)
 * Clicking on the "Create" button will start the assembly process. The next screen provides some overview information on the container image
 ![create](/images/openshift-application-created.png)
