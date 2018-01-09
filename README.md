@@ -129,8 +129,39 @@ We purposefully deleted the application from our workspace in order to demonstra
 * Select "Import Application"
 * You can use the default values on the next screen
 Once complete, the application is now available to edit directly in JBoss Developer Studio, already hooked into the Git repository.
+You can fully interact with the OpenShift instance directly from your JBoss Developer Studio Environment
 
-
+Lab IV - Adding Jenkins
+-------------------------
+This lab will quickly show how Jenkins can be integrated into your project.
+* Next to the project name on the top of the OpenShift Web Console is a drop down titled "Add to Project".  
+![](/images/jenkins-add-to-project.png)
+Select the "Browse Catalog Option"
+* Scroll to the bottom of this window and in the Technologies section, select "Continuous Integration & Deployment
+![](/images/jenkins-select-ci.png)
+* Select the "Jenkins (Persistent) option on the next screen
+* On the next screen, leave all values defaulted and click the "Create" button at the bottom
+![](/images/jenkins-default-options.png)
+* You can ignore the warning that is displayed regarding the permission grant. Hit the "Create Anyway" button
+* A new Jenkins instance will be added to your project
+* If you hit the "Continue to Overview" link, you will now see your Application Overivew screen with the Jenkins instance added
+![](/images/jenkins-added-to-project.png)
+* We now have a working Jenkins instance.  Let's log into it and have it manage our application builds
+* Select the link off the Overview screen that will take you to the familiar Jenkins user interface.
+* The first time you access Jenkins, it will ask to authorize through OpenShift.  This is because when the image was created, one of the options was how to authorize the Jenkins user. 
+* On the Jenkins Home page, click "New Item"
+* "Enter a name ("jenkins-tomcat-webapp), "Freestyle Project", and select "OK" at the bottom of the screen.
+![](/images/jenkins-new-item.png)
+* We now have an empty Jenkins project with the OpenShift pipeline plugins available to dictate how the build will be managed.
+    * Remove the "Restrict where this project can be run" checkbox
+    * Under Source Code Management, select Git and enter the URL to your repository
+    * On the Build section, enter the following:
+        * Trigger OpenShift Build - enter "tomcat-instance" as the Build Config
+        * Trigger OpenShift Deployment - enter "tomcat-instance" as the Deployment Config
+        * Scale OpenShift Deployment - enter "tomcat-instance" as the Deployment Config and "1" as the number of replicas
+    * Save this
+    * Click "Build Now"
+    * Navigate back to your OpenShift console, and on the Application Overview, you will see a new version of the tomcat-instance (Tomcat web application being built)
 
 
 1. Make sure you have started the JBoss EAP server as described above.
