@@ -153,51 +153,14 @@ Select the "Browse Catalog Option"
 * "Enter a name ("jenkins-tomcat-webapp), "Freestyle Project", and select "OK" at the bottom of the screen.
 ![](/images/jenkins-new-item.png)
 * We now have an empty Jenkins project with the OpenShift pipeline plugins available to dictate how the build will be managed.
-    * Remove the "Restrict where this project can be run" checkbox
+    * Remove the "Restrict where this project can be run" checkbox (note - is this needed?)
     * Under Source Code Management, select Git and enter the URL to your repository
-    * On the Build section, enter the following:
-        * Trigger OpenShift Build - enter "tomcat-instance" as the Build Config
-        * Trigger OpenShift Deployment - enter "tomcat-instance" as the Deployment Config
-        * Scale OpenShift Deployment - enter "tomcat-instance" as the Deployment Config and "1" as the number of replicas
-    * Save this
-    * Click "Build Now"
+    * Next we will define the steps that Jenkins will take to build the application.  We will be working against the actual Tomcat web application in our Project (which was called "tomcat-instance" earlier in the labs).  On the Build section, enter the following:
+        * Click the "Add build step" and select Trigger OpenShift Build - enter "tomcat-instance" as the name of the Build Config to tigger.
+        * Click the "Add build step" and select Trigger OpenShift Deployment - enter "tomcat-instance" as the Deployment Config
+        * Click the "Add build step" and select Scale OpenShift Deployment - enter "tomcat-instance" as the Deployment Config and "1" as the number of replicas
+    * We have just defined a Jenkins managed job to build a web application, and  have OpenShift containerize and deploy the application.  Click the "Save" button.
+    * On the left-hand navigation panel, Click "Build Now"
     * Navigate back to your OpenShift console, and on the Application Overview, you will see a new version of the tomcat-instance (Tomcat web application being built)
 
-
-1. Make sure you have started the JBoss EAP server as described above.
-2. Open a command prompt and navigate to the root directory of this quickstart.
-3. Type this command to build and deploy the archive:
-
-        mvn clean install wildfly:deploy
-
-4. This will deploy `target/jboss-helloworld.war` to the running instance of the server.
-
-
-Access the application 
----------------------
-
-The application will be running at the following URL: <http://localhost:8080/jboss-helloworld>. 
-
-
-Undeploy the Archive
---------------------
-
-1. Make sure you have started the JBoss EAP server as described above.
-2. Open a command prompt and navigate to the root directory of this quickstart.
-3. When you are finished testing, type this command to undeploy the archive:
-
-        mvn wildfly:undeploy
-
-
-Run the Quickstart in Red Hat JBoss Developer Studio or Eclipse
--------------------------------------
-You can also start the server and deploy the quickstarts or run the Arquillian tests from Eclipse using JBoss tools. For general information about how to import a quickstart, add a JBoss EAP server, and build and deploy a quickstart, see [Use JBoss Developer Studio or Eclipse to Run the Quickstarts](https://github.com/jboss-developer/jboss-developer-shared-resources/blob/master/guides/USE_JBDS.md#use-jboss-developer-studio-or-eclipse-to-run-the-quickstarts) 
-
-
-Debug the Application
-------------------------------------
-
-If you want to debug the source code of any library in the project, run the following command to pull the source into your local repository. The IDE should then detect it.
-
-        mvn dependency:sources
-
+Other steps to the build process can be added, such as automatically building when code is comitted, executing tests, or handing the process off to another Jenkins job.
