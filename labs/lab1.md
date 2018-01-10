@@ -1,12 +1,16 @@
 Lab I - Simple Web Application
 ===============================
 
+This lab is simply demonstrating how to set up your local development environment with JBoss Developer Studio / Eclipse, install Tomcat, configure JBDS to interact with Tomcat, and to import a sample Tomcat application which will be used in subsequent labs.
+
 Install JBoss Developer Studio
 ---------------
-JBoss developer studio is an Eclipse-based development environment with numerous tools pre-installed. It can be downloaded from the Red Hat customer portal at [JBDS Download Link](https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=jbossdeveloperstudio&version=10.4.0).
+JBoss developer studio is an Eclipse-based development environment with numerous productivity tools pre-installed. It can be downloaded from the Red Hat customer portal at [JBDS Download Link](https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=jbossdeveloperstudio&version=10.4.0).
+
+If you already have Eclipse installed, you can also use the [community](https://tools.jboss.org/) version of the toolset in your copy of Eclipse.
 
 
-Import the Project
+1 - Import the Project
 -------------------------
 First, let's import a simple Tomcat web application.  The project is in [Github](https://github.com/egetchel/SampleWebApp) for convenient access. It is strongly recommended that you Fork this project so that local changes can be committed and redeployments triggered.
  
@@ -20,7 +24,7 @@ Note: Enter the URL of your Forked repository.
 * Make sure the SampleWebApp is selected and hit Finish
 ![import](/images/import-specify-resources.png)
 
-Install and Register Tomcat Server with JBoss Developer Studio
+2 - Install and Register Tomcat Server with JBoss Developer Studio
 -------------------------
 Next, we will install Tomcat and configure JBoss Developer Studio to be able to interact with the server.
 * Install [JBoss Web Server 3](https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?product=webserver&downloadType=distributions) or community [Apache Tomcat](https://tomcat.apache.org/download-70.cgi).  Make note of where the binaries are installed.
@@ -35,7 +39,7 @@ Next, we will install Tomcat and configure JBoss Developer Studio to be able to 
 
 The server should now show in the Servers tab at the bottom of the screen.
 
-Update the Document Root
+3 - Update the Document Root
 -------------------------
 Note: This step is a workaround. The pom.xml is configured to create a web application as ROOT.WAR, which normally instructs Tomcat to deploy the application without a context root. In this case, Eclipse is generating an application with a context root of 'ROOT'.  This one-time step will eliminate this incorrect context root.
 * Open the Server configuration by double-clicking on the Tomcat server in the Servers tab.
@@ -47,7 +51,7 @@ Note: This step is a workaround. The pom.xml is configured to create a web appli
 * Click OK
 * Save the configuration changes (File -> Save or hit the disk icon).
 
-Start the Tomcat Server
+4 - Start the Tomcat Server
 -------------------------
 
 * Either right-click on the Tomcat server in the Servers tab and select Start, or click the green play button on the Servers tab. 
