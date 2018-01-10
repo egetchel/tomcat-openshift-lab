@@ -20,7 +20,7 @@ The application in this project is designed to be run as a standalone Tomcat app
 
 You will need Java 8.0 (Java SDK 1.8) or later, Maven 3.1.1 or later, JBoss Developer Studio 10, Tomcat 7 or 8, and an instance of OpenShift.
 
-![lab1 - Import the Tomcat application](/labs/lab1.md)
+[lab1 - Import the Tomcat application](/labs/lab1.md)
 
 * ![lab2 - Containerize the Tomcat application](/lab2.md)
 * ![lab3 - Hook JBDS to OpenShift](/lab3.md)
