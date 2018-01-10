@@ -16,6 +16,7 @@ Select the "Browse Catalog Option"
 ![](/images/jenkins-added-to-project.png)
 * We now have a working Jenkins instance.  Let's log into it and have it manage our application builds
 * Select the link off the Overview screen that will take you to the familiar Jenkins user interface.
+![](/images/jenkins-navigate-to-server.png)
 * The first time you access Jenkins, it will ask to authorize through OpenShift.  This is because when the image was created, one of the options was how to authorize the Jenkins user. 
 * On the Jenkins Home page, click "New Item"
 * "Enter a name ("jenkins-tomcat-webapp), "Freestyle Project", and select "OK" at the bottom of the screen.
