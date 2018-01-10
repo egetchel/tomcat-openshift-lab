@@ -3,7 +3,7 @@ Openshift Developer Workflow Labs for Java Based Web Applications
 Author: Eric Getchell   
 Level: Intermediate  
 Technologies: OpenShift, JBoss Developer Studio, Tomcat, Web Applications,  Git, Containers  
-Summary: Step through a simple workflow that demonstrates portability between containerized and non-containerized runtimes with a sample Tomcat application.  Learn how to leverage Source 2 Image (S2I) for containerizing existing applications)  
+Summary: Step through a simple workflow that demonstrates portability between containerized and non-containerized runtimes with a sample Tomcat application.  Learn how to leverage Source 2 Image (S2I) for containerizing existing applications  
 Target Products: JBoss JWS, OpenShift, JBoss Developer Studio  
 Source: <https://github.com/egetchel/tomcat-openshift-lab>  
 
@@ -20,7 +20,7 @@ You will need Java 8.0 (Java SDK 1.8) or later, Maven 3.1.1 or later, JBoss Deve
 
 Labs
 ----
-* [lab1 - Import the Tomcat application](/labs/lab1.md)
-* [lab2 - Containerize the Tomcat application](/labs/lab2.md)
-* [lab3 - Hook JBDS to OpenShift](/labs/lab3.md)
-* [lab4 - Add Jenkins](/labs/lab4.md)
+* [lab1 - Environment Setup and application import](/labs/lab1.md)
+* [lab2 - Containerizing the Tomcat application](/labs/lab2.md)
+* [lab3 - JBoss Developer Studio to OpenShift workflow](/labs/lab3.md)
+* [lab4 - Adding Jenkins](/labs/lab4.md)

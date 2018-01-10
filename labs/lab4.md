@@ -1,12 +1,13 @@
 Lab IV - Adding Jenkins
 -------------------------
-This lab will quickly show how Jenkins can be integrated into your project.
+This lab will quickly show how Jenkins can be integrated into your project. This lab will be done from within the Web Console of OpenShift.  This will be a brief introduction with the intent in getting a minimal Jenkins install working.
+
 * Next to the project name on the top of the OpenShift Web Console is a drop down titled "Add to Project".  
 ![](/images/jenkins-add-to-project.png)
 Select the "Browse Catalog Option"
 * Scroll to the bottom of this window and in the Technologies section, select "Continuous Integration & Deployment
 ![](/images/jenkins-select-ci.png)
-* Select the "Jenkins (Persistent) option on the next screen
+* Select the "Jenkins (Persistent) option on the next screen. *Note, depending on your OpenShift environment, the Jenkins image may need to be installed with a persistent volume.*
 * On the next screen, leave all values defaulted and click the "Create" button at the bottom
 ![](/images/jenkins-default-options.png)
 * You can ignore the warning that is displayed regarding the permission grant. Hit the "Create Anyway" button
@@ -30,4 +31,4 @@ Select the "Browse Catalog Option"
     * On the left-hand navigation panel, Click "Build Now"
     * Navigate back to your OpenShift console, and on the Application Overview, you will see a new version of the tomcat-instance (Tomcat web application being built)
     ![](/images/jenkins-build-config.png)
-Other steps to the build process can be added, such as automatically building when code is comitted, executing tests, or handing the process off to another Jenkins job.
+Other steps to the build process can be added, such as automatically building when code is committed, executing tests, or handing the process off to another Jenkins job.
