@@ -27,9 +27,10 @@ Select the "Browse Catalog Option"
     * Next we will define the steps that Jenkins will take to build the application.  We will be working against the actual Tomcat web application in our Project (which was called "tomcat-instance" earlier in the labs).  On the Build section, enter the following:
         * Click the "Add build step" and select Trigger OpenShift Build - enter "tomcat-instance" as the name of the Build Config to tigger.
         * Click the "Add build step" and select Trigger OpenShift Deployment - enter "tomcat-instance" as the Deployment Config
-        * Click the "Add build step" and select Scale OpenShift Deployment - enter "tomcat-instance" as the Deployment Config and "1" as the number of replicas
+        * Click the "Add build step" and select Scale OpenShift Deployment - enter "tomcat-instance" as the Deployment Config and "1" as the number of replicas  
+    ![](/images/jenkins-build-config.png)    
     * We have just defined a Jenkins managed job to build a web application, and  have OpenShift containerize and deploy the application.  Click the "Save" button.
     * On the left-hand navigation panel, Click "Build Now"
     * Navigate back to your OpenShift console, and on the Application Overview, you will see a new version of the tomcat-instance (Tomcat web application being built)
-    ![](/images/jenkins-build-config.png)
+    
 Other steps to the build process can be added, such as automatically building when code is committed, executing tests, or handing the process off to another Jenkins job.
