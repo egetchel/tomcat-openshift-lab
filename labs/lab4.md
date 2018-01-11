@@ -12,17 +12,17 @@ Select the "Browse Catalog Option"
 ![](/images/jenkins-default-options.png)
 * You can ignore the warning that is displayed regarding the permission grant. Hit the "Create Anyway" button
 * A new Jenkins instance will be added to your project
-* If you hit the "Continue to Overview" link, you will now see your Application Overivew screen with the Jenkins instance added
+* If you hit the "Continue to Overview" link, you will now see your project has both a Tomcat application instance and a Jenkins application instance running.
 ![](/images/jenkins-added-to-project.png)
 * We now have a working Jenkins instance.  Let's log into it and have it manage our application builds
 * Select the link off the Overview screen that will take you to the familiar Jenkins user interface.
 ![](/images/jenkins-navigate-to-server.png)
 * The first time you access Jenkins, it will ask to authorize through OpenShift.  This is because when the image was created, one of the options was how to authorize the Jenkins user. 
 * On the Jenkins Home page, click "New Item"
-* "Enter a name ("jenkins-tomcat-webapp), "Freestyle Project", and select "OK" at the bottom of the screen.
+* "Enter a name ("jenkins-tomcat-webapp), click "Freestyle Project", and select "OK" at the bottom of the screen.
 ![](/images/jenkins-new-item.png)
-* We now have an empty Jenkins project with the OpenShift pipeline plugins available to dictate how the build will be managed.
-    * Remove the "Restrict where this project can be run" checkbox (note - is this needed?)
+* We now have an empty Jenkins project with the OpenShift pipeline plugins available to configure how the build will be managed.
+    * Remove the "Restrict where this project can be run" checkbox *(note - is this needed?)*
     * Under Source Code Management, select Git and enter the URL to your repository
     * Next we will define the steps that Jenkins will take to build the application.  We will be working against the actual Tomcat web application in our Project (which was called "tomcat-instance" earlier in the labs).  On the Build section, enter the following:
         * Click the "Add build step" and select Trigger OpenShift Build - enter "tomcat-instance" as the name of the Build Config to tigger.
