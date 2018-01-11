@@ -21,7 +21,8 @@ Select the Red Hat JBoss Web Server (Tomcat) button.
 ![create](/images/openshift-application-created.png)
 * Click the "Continue to overview" link
 * After a minute or so, you should see a screen that looks something like the following:
-![create](/images/openshift-application-overview.png)
+![create](/images/openshift-application-overview.png)  
+Clicking on the link (red arrow above) will open a new browser tab and navigate you to your running web application. *Note, the URL will be specific to your OpenShift environment.*
 So, what just we just do?  Essentially, we have instructed OpenShift to compile our application, use a base builder image (consisting of a JDK and Tomcat), and layer our application in as a standard Docker image.
 
 In the [next](/labs/lab3.md) we will demonstrate how we can interact with the OpenShift environment directly from JBoss Developer Studio.
