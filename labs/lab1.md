@@ -5,8 +5,12 @@ This lab is simply demonstrating how to set up your local development environmen
 
 Install JBoss Developer Studio
 ---------------
-JBoss Developer Studio (JBDS) is an Eclipse-based development environment with numerous productivity tools pre-installed. It can be downloaded from the Red Hat customer portal at [JBDS Download Link](https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=jbossdeveloperstudio&version=10.4.0).
+JBoss Developer Studio (JBDS) is an Eclipse-based development environment with numerous productivity tools pre-installed.  
+* It can be downloaded from the Red Hat customer portal at [JBDS Download Link](https://access.redhat.com/jbossnetwork/restricted/listSoftware.html?downloadType=distributions&product=jbossdeveloperstudio&version=10.4.0).
+* Once downloaded, from a terminal, simply run the installer
+'''java -jar devstudio-10.4.0.GA-installer-standalone.jar
 
+This will launch the graphical installer. You can select the default values and point to your existing JDK. 
 If you already have Eclipse installed, you can also use the [community](https://tools.jboss.org/) version of the toolset in your copy of Eclipse.
 
 
