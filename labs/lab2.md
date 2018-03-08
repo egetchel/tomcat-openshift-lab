@@ -4,21 +4,31 @@ In this lab, we will automatically containerize the web application from the pre
  
 * Log into OpenShift.  If no Projects exist, then the Create Project button will be available
 ![create](/images/openshift-home-page.png)
-* Click Create Project to launch the wizzard used to create a Project and associate applications to it.  A Project in OpenShift is a way to group individual applications. On the Create Project screen, enter a project name and display name for the project.  
+* In the upper-right hand section of the screen, click Create Project to launch the wizard used to create a Project and associate applications to it.  A Project in OpenShift is a way to group individual applications. On the Create Project screen, enter a project name and display name for the project.  
 ![create](/images/openshift-create-project.png)  
-After entering field values, click the "Create" button.
-* Now that the Project is created, we will add the Tomcat web application itself.  The next screen shows the various technologies that OpenShift can containerize.  
-![create](/images/openshift-add-java-application.png)  
+* After entering field values, click the "Create" button. The screen will reflect the newly created Project  
+![create](/images/openshift-project-created.png)
+* Click the Project name "Tomcat Web App" to navigate into the Project you just created.  You are now in an empty Project.  
+[create](/images/openshift-empty-project.png)
+* Now that the Project is created, we will add the Tomcat web application itself. Clicking the "Browse Catalog" button will show the various technologies that OpenShift can containerize out of the box.  The screen that is displayed allows for filtering.  In this case, I selected "Languages"
+[create](/images/openshift-openshift-language-filter.png)
+* 
 Click the "Java" button to bring up the next screen.
 * Next, we can specify the type of Java application we want to containerize and deploy. You can see various default offerings from a simple Java main (OpenJDK), to a fully featured JEE Application Server (Red Hat JBoss EAP) and Tomcat to name a few.
 ![create](/images/openshift-create-tomcat-app.png)  
 Select the Red Hat JBoss Web Server (Tomcat) button.
-* The next screen shows all available Tomcat images. Choose any of the Tomcat 7 images.
-![create](/images/openshift-specify-tomcat-version.png)
+* This will bring up a wizard to configure the Tomcat portion of your project  
+![create](/images/openshift-create-tomcat-webapp-step-1.png)
+* Click the "Next" button
+* This screen allows individual configurations based on the type of image you are using. For example, if this image also had a database component, you would be able to supply a username and password pair here.  Use the Git URL of your repository cloned in previous steps (or https://github.com/egetchel/SampleWebApp/ if you want to quickly try a sample application).   
+Typically, default values can be used, but there are a couple bugs (which may be fixed in your environment) around the default values.
+- Git Reference : Remove any value
+- Context Directory : Remove any value
+The remaining values can remain as-is  
+![create](/images/openshift-create-tomcat-webapp-step-2.png) 
+* Hit the "Create" button which will show that the applicaiton has been created.
+![create](/images/openshift-create-tomcat-webapp-step-3.png) 
 * Finally, we provide a name for the actual Tomcat resource as well as where the source code of our web application resides.  Use the Git URL of your repository used in previous steps (or https://github.com/egetchel/SampleWebApp/ if you want to quickly try a sample application).  
-![create](/images/openshift-assicate-git-repo.png)
-* Clicking on the "Create" button will start the assembly process. The next screen provides some overview information on the container image
-![create](/images/openshift-application-created.png)
 * Click the "Continue to overview" link
 * After a minute or so, you should see a screen that looks something like the following:
 ![create](/images/openshift-application-overview.png)  
