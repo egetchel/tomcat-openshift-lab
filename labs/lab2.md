@@ -15,7 +15,7 @@ In this lab, we will automatically containerize the web application from the pre
 * 
 Click the "Java" button to bring up the next screen.
 * Next, we can specify the type of Java application we want to containerize and deploy. You can see various default offerings from a simple Java main (OpenJDK), to a fully featured JEE Application Server (Red Hat JBoss EAP) and Tomcat to name a few.
-[create](/images/openshift-select-language.png)
+[create](/openshift-select-language.png)
 Select the Red Hat JBoss Web Server (Tomcat) button.
 * This will bring up a wizard to configure the Tomcat portion of your project  
 ![create](/images/openshift-create-tomcat-webapp-step-1.png)
