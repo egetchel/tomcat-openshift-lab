@@ -11,7 +11,7 @@ In this lab, we will automatically containerize the web application from the pre
 * Click the Project name "Tomcat Web App" to navigate into the Project you just created.  You are now in an empty Project.  
 ![create](/images/openshift-empty-project.png)
 * Now that the Project is created, we will add the Tomcat web application itself. Clicking the "Browse Catalog" button will show the various technologies that OpenShift can containerize out of the box.  The screen that is displayed allows for filtering.  In this case, I selected "Languages"
-![create](/images/openshift-language-filter.png)
+![create](/images/openshift-select-language.png)
 * Click the "Java" button to bring up the next screen.
 * Next, we can specify the type of Java application we want to containerize and deploy. You can see various default offerings from a simple Java main (OpenJDK), to a fully featured JEE Application Server (Red Hat JBoss EAP) and Tomcat to name a few.  
 ![create](/openshift-select-language.png)
