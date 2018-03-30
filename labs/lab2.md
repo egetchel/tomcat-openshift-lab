@@ -20,9 +20,9 @@ Select the Red Hat JBoss Web Server (Tomcat) button.
 ![create](/images/openshift-create-tomcat-webapp-step-1.png)
 * Click the "Next" button  
 * This screen allows individual configurations based on the type of image you are using. For example, if this image also had a database component, you would be able to supply a username and password pair here.  Use the Git URL of your repository cloned in previous steps (or https://github.com/egetchel/SampleWebApp/ if you want to quickly try a sample application).   
-Typically, default values can be used, but there are a couple bugs (which may be fixed in your environment) around the default values.
-- Git Reference : Remove any value
-- Context Directory : Remove any value
+Typically, default values can be used, but there are a couple bugs (which may be fixed in your environment) around the default values.  Update the screen with the following changes
+   * Git Reference : Remove any value
+   * Context Directory : Remove any value  
 The remaining values can remain as-is  
 ![create](/images/openshift-create-tomcat-webapp-step-2.png) 
 * Hit the "Create" button which will show that the applicaiton has been created.
